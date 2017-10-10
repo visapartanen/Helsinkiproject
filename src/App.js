@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import Header from './Header'
+import Header from './Header';
+import PersonalInfo from './PersonalInfo';
+import Timeline from './Timeline';
+import Applications from './Applications';
+import Messages from './Messages';
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +18,21 @@ class App extends Component {
     this.setState({
       content: contentId
     });
+  }
+
+  getComponent(componentId) {
+    switch(componentId) {
+      case 'personal-info':
+        return <PersonalInfo/>;
+      case 'timeline':
+        return <Timeline/>;
+      case 'applications':
+        return <Applications/>;
+      case 'messages':
+        return <Messages/>;
+      default:
+        return <div>Not found</div>;
+    }
   }
 
   render() {
@@ -31,7 +50,7 @@ class App extends Component {
                 <li className={classNames({active: this.state.content === 'messages'})}><a onClick={this.changeContent.bind(this, 'messages')}>Messages</a></li>
               </ul>
             </div>
-            <div className="col-md-9">{this.state.content}</div>
+            <div className="col-md-9">{this.getComponent(this.state.content)}</div>
           </div>
         </div> 
       </div>
