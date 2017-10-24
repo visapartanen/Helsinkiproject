@@ -3,14 +3,14 @@ import classNames from 'classnames';
 import Header from './Header';
 import PersonalInfo from './PersonalInfo';
 import Timeline from './Timeline';
-import Applications from './Applications';
+import Status from './Status';
 import Messages from './Messages';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: "personal-info"
+      content: "timeline"
     };
   }
 
@@ -27,7 +27,7 @@ class App extends Component {
       case 'timeline':
         return <Timeline/>;
       case 'applications':
-        return <Applications/>;
+        return <Status/>;
       case 'messages':
         return <Messages/>;
       default:
@@ -52,7 +52,7 @@ class App extends Component {
             </div>
             <div className="col-md-9">{this.getComponent(this.state.content)}</div>
           </div>
-        </div> 
+        </div>
       </div>
     );
   }
