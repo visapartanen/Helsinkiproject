@@ -4,18 +4,43 @@ class Status extends Component {
   render() {
     return (
       <div>
-        <h3>Your Information</h3>
-        <form className="form-inline">
-          <div className="form-group">
-            <label for="exampleInputName2">Name</label>
-            <input type="text" className="form-control" id="exampleInputName2" placeholder="Jane Doe" />
-          </div>
-          <div className="form-group">
-            <label for="exampleInputEmail2">Email</label>
-            <input type="email" className="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com" />
-          </div>
-          <button type="submit" className="btn btn-default">Send invitation</button>
-        </form>
+        <h3>Status</h3>
+        <p>Here is the application results.</p>
+
+        <div>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>School</th>
+                <th>Process</th>
+                <th>Results</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Ressu Upper Secondary School</td>
+                <td>Completed</td>
+                <td>Acpeted</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>International School of Helsinki</td>
+                <td>Processing</td>
+                <td>Undecided</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>The English School (Helsinki)</td>
+                <td>Received</td>
+                <td>Undecided</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
       </div>
     );
   }

@@ -3,14 +3,14 @@ import classNames from 'classnames';
 import Header from './Header';
 import PersonalInfo from './PersonalInfo';
 import Timeline from './Timeline';
-import Status from './Status';
+import ApplicationStatus from './ApplicationStatus';
 import Messages from './Messages';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: "timeline"
+      content: "applications"
     };
   }
 
@@ -27,7 +27,7 @@ class App extends Component {
       case 'timeline':
         return <Timeline/>;
       case 'applications':
-        return <Status/>;
+        return <ApplicationStatus/>;
       case 'messages':
         return <Messages/>;
       default:
@@ -46,8 +46,8 @@ class App extends Component {
               <ul className="nav nav-pills nav-stacked">
                 <li className={classNames({active: this.state.content === 'personal-info'})}><a onClick={this.changeContent.bind(this, 'personal-info')}>Personal Info</a></li>
                 <li className={classNames({active: this.state.content === 'timeline'})}><a onClick={this.changeContent.bind(this, 'timeline')}>Timeline</a></li>
-                <li className={classNames({active: this.state.content === 'applications'})}><a onClick={this.changeContent.bind(this, 'applications')}>Applications</a></li>
-                <li className={classNames({active: this.state.content === 'messages'})}><a onClick={this.changeContent.bind(this, 'messages')}>Messages</a></li>
+                <li className={classNames({active: this.state.content === 'applications'})}><a onClick={this.changeContent.bind(this, 'applications')}>Application Status</a></li>
+                <li className={classNames({active: this.state.content === 'messages'})}><a onClick={this.changeContent.bind(this, 'messages')}>Messages<span className="badge">4</span></a></li>
               </ul>
             </div>
             <div className="col-md-9">{this.getComponent(this.state.content)}</div>

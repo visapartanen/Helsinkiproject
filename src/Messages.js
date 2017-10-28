@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Messages extends Component {
   render() {
     return (
-      <div>Messages comes here...</div>
+      <div>Messages come here...</div>
     );
   }
 }

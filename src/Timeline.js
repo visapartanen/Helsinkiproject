@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 class Timeline extends Component {
 
+
+
   school(title, name) {
     return (
       <div className="col-xs-6 col-sm-3">
@@ -11,7 +13,7 @@ class Timeline extends Component {
           </div>
           <div className="panel-body">
             <div>{name}</div>
-            <button class="btn btn-default btn-sm">change school</button>
+            <button class="btn btn-default btn-sm">Change School</button>
           </div>
         </div>
       </div>

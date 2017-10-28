@@ -18,8 +18,14 @@ class PersonalInfo extends Component {
               <label for="phonenumber">Phone number</label>
               <input type="text" className="form-control" id="phonenumber" placeholder="040 123 4567" />
 
-              <label for="emailaddress">Email address</label>
-              <input type="email" className="form-control" id="emailaddress" placeholder="matti.korhonen@gmail.com" />
+              <label for="email">Email</label>
+              <input type="email" className="form-control" id="email" placeholder="matti.korhonen@gmail.com" />
+
+              <label for="primaryaddress">Primary address</label>
+              <input type="text" className="form-control" id="primaryaddress" placeholder="Kaivopuisto tie 1, Helsinki" />
+
+              <label for="secondaryaddress">Secondary address</label>
+              <input type="text" className="form-control" id="secondaryaddress" placeholder="Lauttasaarinkuja 2, Helsinki" />
             </div>
 
           <label for="title">First Child's Information</label>
