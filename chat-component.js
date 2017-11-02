@@ -1,5 +1,5 @@
 var ChatApp = window.React.createClass({
-  getInitialState: function(){
+  getInitialState: function(){ //fds
     return {
       messages:[],
       socket: window.io('http://localhost:3000'),
