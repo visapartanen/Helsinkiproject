@@ -4,7 +4,7 @@ import Header from './Header';
 import PersonalInfo from './PersonalInfo';
 import Timeline from './Timeline';
 import ApplicationStatus from './ApplicationStatus';
-import Messages from './Messages';
+import Chat from './Chat';
 
 class App extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class App extends Component {
       case 'applications':
         return <ApplicationStatus/>;
       case 'messages':
-        return <Messages/>;
+        return <Chat/>;
       default:
         return <div>Not found</div>;
     }
