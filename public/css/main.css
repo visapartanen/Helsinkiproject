@@ -6197,3 +6197,11 @@ fieldset[disabled] .form-control {
 
 .header {
   border-bottom: 2px solid #525a65; }
+
+.alasisennys {
+     padding-bottom: 1cm;
+}
+
+.textarea {
+  resize: none;
+}

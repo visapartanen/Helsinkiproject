@@ -20,29 +20,36 @@ class Chat extends  Component {
     });
   }
   submitMessage(){
+    var d = new Date();
     var body = document.getElementById("message").value;
     var message = {
+        date: "|| Received " + d.toUTCString(),
         body: body,
-        user: this.state.user || "guest "
+        user: this.state.user || "guest"
     };
     this.state.socket.emit("new-message", message);
   }
   pickUser(){
     var user = document.getElementById("user").value;
-    this.setState({user: user});
+    this.setState({user:user});
   }
   render(){
+    var d = new Date();
     var self = this;
     var messages = self.state.messages.map(function(msg){
-      return <li><strong>{msg.user}</strong><span>{msg.body}</span></li>
+      return <li><strong>{msg.user}: </strong>
+      <span>{msg.body}</span><p>  </p><em>{msg.date}</em></li>
+
     });
     return(
       <div>
-       <ul>
+       <ul className="chatbox">
        {messages}
        </ul>
-       <input id="message" type="text"/><button onClick={() => self.submitMessage()}>send message</button><br/>
-       <input id="user" type="text" placeholder="choose a username" /> <button onClick={() => self.pickUser()}> select user </button>
+       <div className ="alasisennys"></div>
+       <textarea className="textarea" rows="5" cols="100" id="message" type="text" placeholder="Insert message here"/><br/>
+       <button onClick={() => self.submitMessage()} class="btn btn-default btn-lg">Send message</button> <br/>
+       <input id="user" type="text" placeholder="Choose a username" /> <button onClick={() => self.pickUser()} class="btn btn-default btn-sm">select user</button>
       </div>
     )
 
