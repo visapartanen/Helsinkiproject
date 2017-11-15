@@ -5,8 +5,14 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="container">
-          <div className="logo"/> 
-          <h1>Helsinki Enlearner Service</h1>
+          <div className="row">
+            <div className="col-md-3">
+              <div className="logo"/>
+            </div>
+            <div className="col-md-9">
+              <h1>Helsinki Enlearner Service</h1>
+            </div>
+          </div>
         </div>
       </div>
     );
