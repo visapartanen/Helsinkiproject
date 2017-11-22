@@ -17,3 +17,26 @@
 .header {
 	border-bottom: 2px solid $dark-gray;
 }
+.alasisennys {
+	padding-bottom: 1cm;
+}
+.alasisennys1 {
+	padding-bottom: 0.130cm;
+}
+.textareachat {
+	resize: none;
+}
+.sendbutton {
+	@extend .btn-default;
+	@extend .btn-lg;
+	position: relative;
+	left: 560px;
+}
+.changeuser{
+	@extend .btn-default;
+	position: relative;
+	left: 466px;
+}
+.chatbox {
+
+}
