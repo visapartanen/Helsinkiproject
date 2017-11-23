@@ -23,7 +23,7 @@ class Chat extends  Component {
     var d = new Date();
     var body = document.getElementById("message").value;
     var message = {
-        date: "|| Received " + d.toUTCString(),
+        date: "Received " + d.toUTCString(),
         body: body,
         user: this.state.user || "guest"
     };
@@ -37,9 +37,14 @@ class Chat extends  Component {
     var d = new Date();
     var self = this;
     var messages = self.state.messages.map(function(msg){
-      return <li><strong>{msg.user}: </strong>
-      <span>{msg.body}</span><p>  </p><em>{msg.date}</em></li>
-
+      return (
+      <div class="chatbox1">
+        <p class = "messageschat">
+        <strong>{msg.user}: </strong>
+        <span>{msg.body}</span><p>  </p><em>{msg.date}</em>
+        </p>
+      </div>
+    )
     });
     return(
       <div>
@@ -47,10 +52,12 @@ class Chat extends  Component {
        {messages}
        </ul>
        <div className ="alasisennys"></div>
-       <textarea className="textareachat" rows="5" cols="100" id="message" type="text" placeholder="Insert message here"/><br/>
+
+       <input id="user" type="text" placeholder="Choose a username" className="changeuser" /> <button onClick={() => self.pickUser()} className="changeuser">Select user</button>
+       <div className="paddingchat"></div>
+       <textarea className="textareachat" rows="5" cols="116" id="message" type="text" placeholder="Insert message here"/><br/>
        <button onClick={() => self.submitMessage()} className="sendbutton">Send message</button> <br/>
        <div className= "alasisennys1"></div>
-       <input id="user" type="text" placeholder="Choose a username" className="changeuser" /> <button onClick={() => self.pickUser()} className="changeuser">Select user</button>
       </div>
     )
 
