@@ -13,7 +13,38 @@
 	margin: 20px;
 	height: 80px;
 }
-
 .header {
 	border-bottom: 2px solid $dark-gray;
+}
+.alasisennys {
+	padding-bottom: 1cm;
+}
+.alasisennys1 {
+	padding-bottom: 0.130cm;
+}
+.messageschat {
+	border-radius: 25px;
+	padding: 20px;
+	border:2px solid $dark-gray;
+}
+.textareachat {
+	resize: none;
+}
+.sendbutton {
+	@extend .btn-default;
+	@extend .btn-lg;
+	position: relative;
+	left: 671px;
+}
+.changeuser{
+	@extend .btn-default;
+	position: relative;
+	left: 579px;
+}
+.chatbox1 {
+	padding: 3px;
+	word-wrap: break-word;
+}
+.paddingchat{
+	padding: 2px;
 }
