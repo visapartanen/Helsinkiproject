@@ -2883,40 +2883,56 @@ a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none; }
 
-.btn-default {
+.btn-default, .sendbutton, .changeuser {
   color: #000000;
   background-color: transparent;
   border-color: #000000; }
-  .btn-default:focus, .btn-default.focus {
+  .btn-default:focus, .sendbutton:focus, .changeuser:focus, .btn-default.focus, .focus.sendbutton, .focus.changeuser {
     color: #000000;
     background-color: transparent;
     border-color: black; }
-  .btn-default:hover {
+  .btn-default:hover, .sendbutton:hover, .changeuser:hover {
     color: #000000;
     background-color: transparent;
     border-color: black; }
-  .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:active, .sendbutton:active, .changeuser:active, .btn-default.active, .active.sendbutton, .active.changeuser,
+  .open > .btn-default.dropdown-toggle,
+  .open > .dropdown-toggle.sendbutton,
+  .open > .dropdown-toggle.changeuser {
     color: #000000;
     background-color: transparent;
     border-color: black; }
-    .btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus,
+    .btn-default:active:hover, .sendbutton:active:hover, .changeuser:active:hover, .btn-default:active:focus, .sendbutton:active:focus, .changeuser:active:focus, .btn-default:active.focus, .sendbutton:active.focus, .changeuser:active.focus, .btn-default.active:hover, .active.sendbutton:hover, .active.changeuser:hover, .btn-default.active:focus, .active.sendbutton:focus, .active.changeuser:focus, .btn-default.active.focus, .active.focus.sendbutton, .active.focus.changeuser,
     .open > .btn-default.dropdown-toggle:hover,
+    .open > .dropdown-toggle.sendbutton:hover,
+    .open > .dropdown-toggle.changeuser:hover,
     .open > .btn-default.dropdown-toggle:focus,
-    .open > .btn-default.dropdown-toggle.focus {
+    .open > .dropdown-toggle.sendbutton:focus,
+    .open > .dropdown-toggle.changeuser:focus,
+    .open > .btn-default.dropdown-toggle.focus,
+    .open > .dropdown-toggle.focus.sendbutton,
+    .open > .dropdown-toggle.focus.changeuser {
       color: #000000;
       background-color: transparent;
       border-color: black; }
-  .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:active, .sendbutton:active, .changeuser:active, .btn-default.active, .active.sendbutton, .active.changeuser,
+  .open > .btn-default.dropdown-toggle,
+  .open > .dropdown-toggle.sendbutton,
+  .open > .dropdown-toggle.changeuser {
     background-image: none; }
-  .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus,
+  .btn-default.disabled:hover, .disabled.sendbutton:hover, .disabled.changeuser:hover, .btn-default.disabled:focus, .disabled.sendbutton:focus, .disabled.changeuser:focus, .btn-default.disabled.focus, .disabled.focus.sendbutton, .disabled.focus.changeuser, .btn-default[disabled]:hover, [disabled].sendbutton:hover, [disabled].changeuser:hover, .btn-default[disabled]:focus, [disabled].sendbutton:focus, [disabled].changeuser:focus, .btn-default[disabled].focus, [disabled].focus.sendbutton, [disabled].focus.changeuser,
   fieldset[disabled] .btn-default:hover,
+  fieldset[disabled] .sendbutton:hover,
+  fieldset[disabled] .changeuser:hover,
   fieldset[disabled] .btn-default:focus,
-  fieldset[disabled] .btn-default.focus {
+  fieldset[disabled] .sendbutton:focus,
+  fieldset[disabled] .changeuser:focus,
+  fieldset[disabled] .btn-default.focus,
+  fieldset[disabled] .focus.sendbutton,
+  fieldset[disabled] .focus.changeuser {
     background-color: transparent;
     border-color: #000000; }
-  .btn-default .badge {
+  .btn-default .badge, .sendbutton .badge, .changeuser .badge {
     color: transparent;
     background-color: #000000; }
 
@@ -3126,7 +3142,7 @@ fieldset[disabled] a.btn {
     color: #abb2bd;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .sendbutton {
   padding: 10px 16px;
   font-size: 20px;
   line-height: 1.33333;
@@ -3392,7 +3408,7 @@ tbody.collapse.in {
   padding-left: 8px;
   padding-right: 8px; }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group > .sendbutton + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px; }
 
@@ -3406,11 +3422,11 @@ tbody.collapse.in {
 .btn .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .sendbutton .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .sendbutton .caret {
   border-width: 0 5px 5px; }
 
 .btn-group-vertical > .btn,
@@ -5899,7 +5915,7 @@ a.list-group-item {
 dl dd, dl dt {
   margin-bottom: 12px; }
 
-.btn-default:hover {
+.btn-default:hover, .sendbutton:hover, .changeuser:hover {
   border-color: #121212;
   color: #121212; }
 
@@ -6020,10 +6036,10 @@ select.form-control:focus {
   .navbar-inverse .navbar-form .form-control {
     border-color: #ffffff;
     color: #ffffff; }
-  .navbar-inverse .btn-default {
+  .navbar-inverse .btn-default, .navbar-inverse .sendbutton, .navbar-inverse .changeuser {
     border-color: #ffffff;
     color: #ffffff; }
-    .navbar-inverse .btn-default:active {
+    .navbar-inverse .btn-default:active, .navbar-inverse .sendbutton:active, .navbar-inverse .changeuser:active {
       border-color: #ebedf1;
       color: #ebedf1; }
 
@@ -6197,3 +6213,32 @@ fieldset[disabled] .form-control {
 
 .header {
   border-bottom: 2px solid #525a65; }
+
+.alasisennys {
+  padding-bottom: 1cm; }
+
+.alasisennys1 {
+  padding-bottom: 0.130cm; }
+
+.messageschat {
+  border-radius: 25px;
+  padding: 20px;
+  border: 2px solid #525a65; }
+
+.textareachat {
+  resize: none; }
+
+.sendbutton {
+  position: relative;
+  left: 671px; }
+
+.changeuser {
+  position: relative;
+  left: 579px; }
+
+.chatbox1 {
+  padding: 3px;
+  word-wrap: break-word; }
+
+.paddingchat {
+  padding: 2px; }
