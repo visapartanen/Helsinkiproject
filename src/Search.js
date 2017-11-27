@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import GoogleMap from "react-google-map"
 import GoogleMapLoader from "react-google-maps-loader"
 
-const MY_API_KEY = "AIzaSyDZvVNfIihs2WtgWLp1RpdY7ipPL7yxZog"
+// Google maps API key
+const MY_API_KEY = "AIzaSyDZvVNfIihs2WtgWLp1RpdY7ipPL7yxZog";
 
+// list of school types, names and ids
 const schoolTypes = [
   {
     name: 'Kindergarten',
@@ -23,8 +25,9 @@ const schoolTypes = [
     name: 'Middle school',
     id: 'middleschool'
   }
-]
+];
 
+// service ids for different school types and langauges
 const serviceIds = {
   kindergarten: {
     fi: 870,
@@ -44,6 +47,7 @@ const serviceIds = {
   }
 };
 
+// Google map component, used by google map loader
 const Map = ({googleMaps, coordinates}) => (
   <div style={{height: '500px'}}>
     <GoogleMap
@@ -62,6 +66,7 @@ Map.propTypes = {
   googleMaps: PropTypes.object.isRequired,
 };
 
+// Search component (main component)
 class Search extends Component {
 
   constructor(props) {
@@ -74,15 +79,20 @@ class Search extends Component {
   }
 
   componentDidMount() {
+    // fetch schools when component is mounted
     this.fetchSchools();
   }
 
   fetchSchools() {
+    // get school type and language from component state
     const {schoolType, language} = this.state;
+    // don't fetch if school type or language is missing
     if (!schoolType || !language) {
       return;
     }
+    // get the service id for a certain school type and language
     const serviceId = serviceIds[schoolType][language];
+
 
     const getOnLoaded = (title) =>
       (googleMaps, map, marker) => {
@@ -108,28 +118,32 @@ class Search extends Component {
   }
 
   selectSchoolType(schoolType) {
+    // set the school type to the state and empty current coordinates/markers
+    // use fetchSchools as callback when state has changed
     this.setState({schoolType, coordinates: []}, this.fetchSchools);
   }
 
   selectLanguage(language) {
+    // set the language to the state and empty current coordinates/markers
+    // use fetchSchools as callback when state has changed
     this.setState({language, coordinates: []}, this.fetchSchools);
   }
 
   render() {
     return (
       <div>
-        <div class="btn-group" data-toggle="buttons">
+        <div className="btn-group" data-toggle="buttons">
           {schoolTypes.map(({name, id}) =>
-            <a key={id} class={this.state.schoolType === id ? 'btn btn-default' : 'btn btn-primary'} onClick={this.selectSchoolType.bind(this, id)}>
+            <a key={id} className={this.state.schoolType === id ? 'btn btn-default' : 'btn btn-primary'} onClick={this.selectSchoolType.bind(this, id)}>
               {name}
             </a>
           )}
         </div>
-        <div class="btn-group" data-toggle="buttons">
-          <a class={this.state.language === 'fi' ? 'btn btn-default' : 'btn btn-primary'} onClick={this.selectLanguage.bind(this, 'fi')}>
+        <div className="btn-group" data-toggle="buttons">
+          <a className={this.state.language === 'fi' ? 'btn btn-default' : 'btn btn-primary'} onClick={this.selectLanguage.bind(this, 'fi')}>
             Finnish
           </a>
-          <a class={this.state.language === 'sv' ? 'btn btn-default' : 'btn btn-primary'} onClick={this.selectLanguage.bind(this, 'sv')}>
+          <a className={this.state.language === 'sv' ? 'btn btn-default' : 'btn btn-primary'} onClick={this.selectLanguage.bind(this, 'sv')}>
             Swedish
           </a>
         </div>

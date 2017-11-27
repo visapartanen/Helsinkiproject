@@ -34,14 +34,13 @@ class Chat extends  Component {
     this.setState({user:user});
   }
   render(){
-    var d = new Date();
     var self = this;
-    var messages = self.state.messages.map(function(msg){
+    var messages = self.state.messages.map(function(msg, i){
       return (
-      <div class="chatbox1">
-        <p class = "messageschat">
+      <div key={i} className="chatbox1">
+        <p className="messageschat">
         <strong>{msg.user}: </strong>
-        <span>{msg.body}</span><p>  </p><em>{msg.date}</em>
+        <span>{msg.body}</span><br/><em>{msg.date}</em>
         </p>
       </div>
     )

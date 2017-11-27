@@ -7,49 +7,49 @@ class PersonalInfo extends Component {
 
         <form>
 
-          <label for="title">Your Information</label>
+          <label htmlFor="title">Your Information</label>
             <div className="form-group">
-              <label for="firstname">First name</label>
+              <label htmlFor="firstname">First name</label>
               <input type="text" className="form-control" id="firstname" placeholder="Matti" />
 
-              <label for="lastname">Last name</label>
+              <label htmlFor="lastname">Last name</label>
               <input type="text" className="form-control" id="lastname" placeholder="Korhonen" />
 
-              <label for="phonenumber">Phone number</label>
+              <label htmlFor="phonenumber">Phone number</label>
               <input type="text" className="form-control" id="phonenumber" placeholder="040 123 4567" />
 
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input type="email" className="form-control" id="email" placeholder="matti.korhonen@gmail.com" />
 
-              <label for="primaryaddress">Primary address</label>
+              <label htmlFor="primaryaddress">Primary address</label>
               <input type="text" className="form-control" id="primaryaddress" placeholder="Kaivopuisto tie 1, Helsinki" />
 
-              <label for="secondaryaddress">Secondary address</label>
+              <label htmlFor="secondaryaddress">Secondary address</label>
               <input type="text" className="form-control" id="secondaryaddress" placeholder="Lauttasaarinkuja 2, Helsinki" />
             </div>
 
-          <label for="title">First Child's Information</label>
+          <label htmlFor="title">First Child's Information</label>
             <div className="form-group">
-              <label for="child1firstname">First name</label>
+              <label htmlFor="child1firstname">First name</label>
               <input type="text" className="form-control" id="child1firstname" placeholder="Ritva" />
 
-              <label for="childlastname">Last name</label>
+              <label htmlFor="childlastname">Last name</label>
               <input type="text" className="form-control" id="childlastname" placeholder="Korhonen" />
 
-              <label for="birthdate">Birthdate</label>
-              <input type="date" className="form-control" id="birthdate" value="2010-01-20" />
+              <label htmlFor="birthdate">Birthdate</label>
+              <input type="date" className="form-control" id="birthdate" defaultValue="2010-01-20" />
             </div>
 
-            <label for="title">Second Child's Information</label>
+            <label htmlFor="title">Second Child's Information</label>
               <div className="form-group">
-                <label for="child2firstname">First name</label>
+                <label htmlFor="child2firstname">First name</label>
                 <input type="text" className="form-control" id="child2firstname" placeholder="Timo" />
 
-                <label for="child2lastname">Last name</label>
+                <label htmlFor="child2lastname">Last name</label>
                 <input type="text" className="form-control" id="child2lastname" placeholder="Korhonen" />
 
-                <label for="birthdate2">Birthdate</label>
-                <input type="date" className="form-control" id="birthdate2" value="2010-01-20" />
+                <label htmlFor="birthdate2">Birthdate</label>
+                <input type="date" className="form-control" id="birthdate2" defaultValue="2010-01-20" />
               </div>
 
           {/*<button className="btn btn-default">Add</button>*/}

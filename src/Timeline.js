@@ -28,7 +28,7 @@ class Timeline extends Component {
           </div>
           <div className="panel-body">
             <div>{name}</div>
-            <button class="btn btn-default btn-sm">Change School</button>
+            <button className="btn btn-default btn-sm">Change School</button>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ class Timeline extends Component {
         <h3>Preliminary study path</h3>
 
         {children.map(child =>
-          <div className="panel panel-default">
+          <div key={child.name} className="panel panel-default">
             <div className="panel-heading">
               <h4 className="panel-title">{child.name}</h4>
             </div>

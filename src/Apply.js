@@ -26,7 +26,7 @@ class Apply extends Component {
 
         <form>
           <div className="form-group">
-            <label for="schoolchoice1">Preference 1</label>
+            <label htmlFor="schoolchoice1">Preference 1</label>
             <select className="form-control" id="schoolpreference1">
               <option>School Name</option>
               <option>Alppila Upper Secondary School</option>
@@ -45,7 +45,7 @@ class Apply extends Component {
 
 
           <div className="form-group">
-            <label for="schoolchoice2">Preference 2</label>
+            <label htmlFor="schoolchoice2">Preference 2</label>
             <select className="form-control" id="schoolpreference2">
               <option>School Name</option>
               <option>Alppila Upper Secondary School</option>
@@ -63,7 +63,7 @@ class Apply extends Component {
           </div>
 
           <div className="form-group">
-            <label for="schoolchoice2">Preference 3</label>
+            <label htmlFor="schoolchoice2">Preference 3</label>
             <select className="form-control" id="schoolpreference2">
               <option>School Name</option>
               <option>Alppila Upper Secondary School</option>

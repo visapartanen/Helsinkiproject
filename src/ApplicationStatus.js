@@ -36,16 +36,16 @@ class ApplicationStatus extends Component {
       <div>
         <div className="row">
           <div className="col-sm-6 col-md-4">
-            <button c type="button" class="btn btn-default">
-              <img src="images/apply.png" alt="apply image" />
+            <button type="button" className="btn btn-default">
+              <img src="images/apply.png" alt="apply" />
                 <a onClick={this.changeContent.bind(this, 'apply')}>
                   <h3>Apply</h3>
                 </a>
             </button>
           </div>
           <div className="col-sm-6 col-md-4">
-            <button c type="button" class="btn btn-default">
-              <img src="images/check.png" alt="status image" />
+            <button type="button" className="btn btn-default">
+              <img src="images/check.png" alt="status" />
                 <a onClick={this.changeContent.bind(this, 'status')}>
                   <h3>Status</h3>
                 </a>
