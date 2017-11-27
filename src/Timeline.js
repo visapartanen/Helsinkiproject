@@ -2,7 +2,18 @@ import React, { Component } from 'react';
 
 class Timeline extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      children: []
+    };
+  }
 
+  componentDidMount() {
+    fetch('/api/children_schools.json')
+      .then(data => data.json())
+      .then(data => this.setState({children: data}));
+  }
 
   school(title, name) {
     return (
@@ -21,22 +32,7 @@ class Timeline extends Component {
   }
 
   render() {
-    const children = [
-      {
-        name: 'Ritva',
-        kindergarten: 'Eira',
-        preSchool: 'Eira',
-        primaryschool: 'Haaga',
-        middleschool: 'Haaga'
-      },
-      {
-        name: 'Timo',
-        kindergarten: 'Eira',
-        preSchool: 'Eira',
-        primaryschool: 'Haaga',
-        middleschool: 'Haaga'
-      }
-    ];
+    const {children} = this.state;
 
     return (
       <div>
