@@ -7,17 +7,19 @@ class ApplicationStatus extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: null
+      content: null // the default content id
     };
   }
 
   changeContent(contentId) {
+    // set state for selected item
     this.setState({
       content: contentId
     });
   }
 
   getComponent(componentId) {
+    // get react component for the component in the state
     switch(componentId) {
       case 'apply':
         return <Apply/>;

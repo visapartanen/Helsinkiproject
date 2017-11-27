@@ -5,17 +5,21 @@ class Timeline extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      children: []
+      children: [] // children's info loaded from API
     };
   }
 
   componentDidMount() {
+    // fetch the children's school information from the API
+    // set the information to the component state when done
     fetch('/api/children_schools.json')
       .then(data => data.json())
       .then(data => this.setState({children: data}));
   }
 
   school(title, name) {
+    // utility function for rendering school column
+    // called by render()
     return (
       <div className="col-xs-6 col-sm-3">
         <div className="panel panel-info">

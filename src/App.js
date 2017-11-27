@@ -11,17 +11,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: "applications"
+      content: "applications" // default component id
     };
   }
 
   changeContent(contentId) {
+    // set state for selected menu item
     this.setState({
       content: contentId
     });
   }
 
   getComponent(componentId) {
+    // get react component for the selected menu item
     switch(componentId) {
       case 'personal-info':
         return <PersonalInfo/>;
