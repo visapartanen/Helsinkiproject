@@ -12,7 +12,7 @@ class Timeline extends Component {
   componentDidMount() {
     // fetch the children's school information from the API
     // set the information to the component state when done
-    fetch('/api/children_schools.json')
+    fetch(`${process.env.PUBLIC_URL}/api/children_schools.json`)
       .then(data => data.json())
       .then(data => this.setState({children: data}));
   }
