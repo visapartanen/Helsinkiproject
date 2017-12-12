@@ -35,17 +35,17 @@ class ApplicationStatus extends Component {
 
       <div>
         <div className="row">
-          <div className="col-sm-6 col-md-4">
-            <button type="button" className="btn btn-default" onClick={this.changeContent.bind(this, 'apply')}>
-              <img src="images/apply.png" alt="apply" style={{width: 100}}/>
+          <div className="col-sm-6">
+            <a className="application-button" onClick={this.changeContent.bind(this, 'apply')}>
+              <img src="images/apply.png" alt="apply"/>
               <h3>Apply</h3>
-            </button>
+            </a>
           </div>
-          <div className="col-sm-6 col-md-4">
-            <button type="button" className="btn btn-default" onClick={this.changeContent.bind(this, 'status')}>
-              <img src="images/check.png" alt="status" style={{width: 100}}/>
+          <div className="col-sm-6">
+            <a className="application-button" onClick={this.changeContent.bind(this, 'status')}>
+              <img src="images/check.png" alt="status"/>
               <h3>Status</h3>
-            </button>
+            </a>
           </div>
         </div>
 

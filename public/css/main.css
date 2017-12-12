@@ -6213,6 +6213,20 @@ fieldset[disabled] .form-control {
 
 .header {
   border-bottom: 2px solid #525a65; }
+  .header h1 {
+    position: relative;
+    top: 10px;
+    text-align: center; }
+
+.application-button {
+  padding: 30px;
+  display: block;
+  text-align: center; }
+  .application-button img {
+    width: 150px; }
+  .application-button h3 {
+    text-decoration: none;
+    color: #000; }
 
 .alasisennys {
   padding-bottom: 1cm; }
@@ -6242,3 +6256,16 @@ fieldset[disabled] .form-control {
 
 .paddingchat {
   padding: 2px; }
+
+.personal-info form {
+  margin: 25px; }
+
+.personal-info .form-group {
+  margin-top: 15px;
+  margin-bottom: 50px; }
+
+.personal-info input {
+  max-width: 350px; }
+
+.categories {
+  margin: 10px; }

@@ -132,13 +132,8 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <div className="btn-group" data-toggle="buttons">
-          {schoolTypes.map(({name, id}) =>
-            <a key={id} className={this.state.schoolType === id ? 'btn btn-default' : 'btn btn-primary'} onClick={this.selectSchoolType.bind(this, id)}>
-              {name}
-            </a>
-          )}
-        </div>
+      <div className="categories">
+        Language:&nbsp;&nbsp;
         <div className="btn-group" data-toggle="buttons">
           <a className={this.state.language === 'fi' ? 'btn btn-default' : 'btn btn-primary'} onClick={this.selectLanguage.bind(this, 'fi')}>
             Finnish
@@ -147,6 +142,19 @@ class Search extends Component {
             Swedish
           </a>
         </div>
+      </div>
+
+      <div className="categories">
+        Education:&nbsp;&nbsp;
+        <div className="btn-group" data-toggle="buttons">
+            {schoolTypes.map(({name, id}) =>
+              <a key={id} className={this.state.schoolType === id ? 'btn btn-default' : 'btn btn-primary'} onClick={this.selectSchoolType.bind(this, id)}>
+                {name}
+              </a>
+            )}
+        </div>
+      </div>
+
         <GoogleMapLoader
           params={{
               key: MY_API_KEY,
