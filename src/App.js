@@ -59,6 +59,7 @@ class App extends Component {
             <div className="col-md-9">{this.getComponent(this.state.content)}</div>
           </div>
         </div>
+        <footer/>
       </div>
     );
   }

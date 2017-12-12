@@ -8,15 +8,37 @@
 
 @import "./node_modules/hel-bootstrap-3/src/sass/theme-custom-styles";
 
+$footer-height: 100px;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 $footer-height;
+}
+
+footer {
+		@include koro("basic",$hel-summer, 300);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: $footer-height;
+    width: 100%;
+    overflow:hidden;
+}
+
 .logo {
-	@include helsinki-logo($hel-black);
+	@include helsinki-logo($hel-white);
 	margin: 20px;
 	height: 80px;
 }
 .header {
-	border-bottom: 2px solid $dark-gray;
+	background-color: $hel-coat;
 
 	h1 {
+		color: $hel-white;
     position: relative;
     top: 10px;
     text-align: center;
