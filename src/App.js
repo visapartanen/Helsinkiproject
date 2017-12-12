@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: "applications" // default component id
+      content: "personal-info" // default component id
     };
   }
 
