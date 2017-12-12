@@ -27,8 +27,7 @@ class Timeline extends Component {
             <h5 className="panel-title">{title}</h5>
           </div>
           <div className="panel-body">
-            <div>{name}</div>
-            <button className="btn btn-default btn-sm">Change School</button>
+            <div className="school-name">{name}</div>
           </div>
         </div>
       </div>
